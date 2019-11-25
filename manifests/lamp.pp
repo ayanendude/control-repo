@@ -26,10 +26,10 @@ service { 'mysql':
 }
 
 # install php5 package
-package { 'php5':
-  require => Exec['apt-update'],        # require 'apt-update' before installing
-  ensure => installed,
-}
+# package { 'php5':
+#   require => Exec['apt-update'],        # require 'apt-update' before installing
+#   ensure => installed,
+# }
 
 # ensure info.php file exists
 file { '/var/www/html/info.php':
