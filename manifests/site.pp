@@ -35,10 +35,15 @@ node default {
 
 node 'kn2' {
   # include common
-  include apache
-  include squid
+  $packages = ['synaptic']  
+    package { $packages: 
+      ensure => "installed" 
+    }
 }
 node 'kn1' {
   # include common
-  include mysql
+  $packages = ['synaptic']  
+    package { $packages: 
+      ensure => "installed" 
+    }
 }
