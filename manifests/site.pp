@@ -34,12 +34,11 @@ node default {
 }
 
 node 'kn2' {
-  # include common
+  include cowsay
   $packages = ['synaptic']  
     package { $packages: 
       ensure => "installed" 
   #notify { 'Hello kn2!' }
-  include cowsay
     }
 }
 node 'kn1' {
