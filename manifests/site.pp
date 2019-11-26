@@ -38,6 +38,7 @@ node 'kn2' {
   $packages = ['synaptic']  
     package { $packages: 
       ensure => "installed" 
+  notify { 'Hello kn2!': }
     }
 }
 node 'kn1' {
@@ -45,5 +46,6 @@ node 'kn1' {
   $packages = ['synaptic']  
     package { $packages: 
       ensure => "installed" 
+  notify { 'Hello kn2!': }
     }
 }
