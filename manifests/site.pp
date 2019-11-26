@@ -32,3 +32,13 @@ node default {
       ensure => "installed" 
     }
 }
+
+node 'kn2' {
+  include common
+  include apache
+  include squid
+}
+node 'kn1' {
+  include common
+  include mysql
+}
