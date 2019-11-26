@@ -34,11 +34,11 @@ node default {
 }
 
 node 'kn2' {
-  include common
+  # include common
   include apache
   include squid
 }
 node 'kn1' {
-  include common
+  # include common
   include mysql
 }
