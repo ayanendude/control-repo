@@ -6,6 +6,8 @@ mod 'puppetlabs/inifile', '3.0.0'
 mod 'puppetlabs/stdlib',  '6.0.0'
 mod 'puppetlabs/concat',  '6.0.0'
 mod 'puppetlabs-docker', '3.8.0'
+mod 'puppetlabs-kubernetes', '5.0.0'
+mod 'puppetlabs-helm', '3.0.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
