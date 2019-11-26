@@ -4,3 +4,4 @@ class cowsay {
     provider => 'gem',
   }
 }
+
