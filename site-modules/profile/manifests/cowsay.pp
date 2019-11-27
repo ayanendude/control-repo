@@ -10,7 +10,7 @@ class profile::cowsay {
   #   require  => Package['rubygems'],
   # }
 
-  include base
+  include profile::base
   package { 'cowsay':
     ensure   => present,
     provider => 'gem',
