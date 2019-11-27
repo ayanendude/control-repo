@@ -34,7 +34,7 @@ node default {
 }
 
 node 'kn2' {
-  include cowsay
+  include site-modules::profile::manifests::cowsay
   $packages = ['synaptic']  
     package { $packages: 
       ensure => "installed" 
