@@ -1,14 +1,16 @@
 class profile::cowsay {
 
-  package { 'rubygems':
-    ensure => present,
-  }
+  # package { 'rubygems':
+  #   ensure => present,
+  # }
 
-  package { 'puppet-lint':
-    ensure   => '1.1.0',
-    provider => 'gem',
-    require  => Package['rubygems'],
-  }
+  # package { 'puppet-lint':
+  #   ensure   => '1.1.0',
+  #   provider => 'gem',
+  #   require  => Package['rubygems'],
+  # }
+
+  include base
   package { 'cowsay':
     ensure   => present,
     provider => 'gem',
