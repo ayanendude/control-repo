@@ -25,12 +25,23 @@ File { backup => false }
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
+
+  include profile::base
+
   $packages = ['vim', 'git', 'curl']  
     package { $packages: 
       ensure => "installed" 
     }
+
+  package { 'rubygems':
+    ensure => present,
+  }
+
+  package { 'puppet-lint':
+    ensure   => '1.1.0',
+    provider => 'gem',
+    require  => Package['rubygems'],
+  }
 }
 
 node 'kn2' {
